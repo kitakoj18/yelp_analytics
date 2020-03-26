@@ -1,0 +1,9 @@
+The goal of this worksheet is to do some testing to better parse and find meaningful topics within a corpus of Yelp reviews for a particular business. 
+
+Typically what I've seen when it comes to topic modeling is standard tokenizing, stemming/lemmatizing, and removing stop words, which are then passed in through some unsupervised algorithm to identify common words that are mentioned, and then placing these words in some sort of word cloud. Although insight can be gained from this, I want to test other ways that will give us more than just single words that are mentioned. Rather, are there groups of words or short statements that we can extract and identify? 
+
+Although n-grams is a possible method to approach this problem, I believe it not to be the most effective as we might miss words that should be grouped with each other but aren't because they are not directly adjacent to each other in the sentence. For example, if we use bigrams for the sentence, "There are a lot of plugs," we will get pairs ("there", "are") ("are", "a") ("a", "lot") ("lot", "of") ("of", "plugs"), without any text preprocessing. If that last pair was a common theme, we aren't really seeing the whole picture. Are there sufficient plugs or not enough of them? 
+
+With the help of SpaCy, I try to integrate the library's ability to parse word dependencies in a sentence. I use this [article](https://medium.com/reputation-com-datascience-blog/keywords-extraction-with-ngram-and-modified-skip-gram-based-on-spacy-14e5625fce23) as a base and hope to extend concepts here by further exploring what might and might not work. 
+
+In addition, I would like to take advantage of SpaCy's name recognition to identify products or statements to pick out various reviews to take a look at and see what they're saying. 
