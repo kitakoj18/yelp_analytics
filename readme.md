@@ -2,6 +2,8 @@
 
 The goal of this worksheet is to do some testing to better parse and gain meaningful insight from a corpus of Yelp reviews for a particular business. Reviews is a great source of information if you're a business owner and you want to know how well certain products are doing or overall how your business is performing. Unfortunately, going through these reviews can be a painstaking effort - having to find which reviews mention a particular product and of these reviews, which are positive or negative, and what are common things that are being said in those positive or negative reviews. 
 
+Most of the files are for testing with spaCy and regex. The cleaned up file that utilizes the testing is the Yelp - Nothing But Coffee [notebook](https://github.com/kitakoj18/yelp_analytics/blob/master/yelp_nothing_but_coffee.ipynb)
+
 ## Approaches
 
 Typically what I've seen when it comes to topic modeling is standard tokenizing, stemming/lemmatizing, and removing stop words, which are then passed in through some unsupervised algorithm to identify common words that are mentioned, and then placing these words in some sort of word cloud. Although insight can be gained from this, I want to test other ways that will give us more than just single words that are mentioned. Rather, are there groups of words or short statements that we can extract and identify? 
